@@ -17,30 +17,6 @@ body {
   color: variables.$uoc-corporate;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: variables.$mqMinWidth) {
-    max-width: none;
-  }
-}
-
 .uoc-title {
   font-family: variables.$font-family-serif;
   font-size: 24px;
@@ -56,4 +32,53 @@ body {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+@supports (display: grid) {
+
+  div {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 2em);
+    background-color: coral;
+    grid-auto-flow: row;
+  }
+
+  li {
+    display: flex;
+  }
+
+  .cell--darkblue {
+    background-color: variables.$uoc-corporate;
+  }
+
+  .cell--white {
+    background-color: variables.$white;
+  }
+
+  li:nth-child(4) {
+    grid-column: span 3;
+  }
+
+  li:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  li:nth-child(13) {
+    grid-row: span 2;
+  }
+
+  li:nth-child(15) {
+    grid-column: span 2;
+  }
+
+  li:nth-child(16) {
+    grid-column: span 2;
+  }
 }

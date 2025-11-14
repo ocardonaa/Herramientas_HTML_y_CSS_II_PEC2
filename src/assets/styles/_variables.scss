@@ -7,10 +7,12 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
+$white: white;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
 $theme-colors: (
- "primary": #C11DA0
+  "light": white,
+  "primary": blue
 );
