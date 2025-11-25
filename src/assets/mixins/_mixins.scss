@@ -1,0 +1,8 @@
+@use '../../assets/styles/variables' as vars;
+@use 'sass:map' as map;
+
+@mixin center-object() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

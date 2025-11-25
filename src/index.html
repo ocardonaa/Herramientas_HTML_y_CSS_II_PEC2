@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div>
-      <li>Cell 1</li>
-      <li class="cell cell--darkblue">Cell 2</li>
-      <li>Cell 3</li>
-      <li>Cell 4</li>
-      <li class="cell cell--darkblue">Cell 5</li>
-      <li>Cell 6</li>
-      <li>Cell 7</li>
-      <li class="cell cell--white">Cell 8</li>
-      <li>Cell 9</li>
-      <li>Cell 10</li>
-      <li class="cell cell--white">Cell 11</li>
-      <li class="cell cell--darkblue">Cell 12</li>
-      <li>Enjoy your meal</li>
-      <li>Cell 14</li>
-      <li>Cell 15</li>
-      <li>Cell 16</li>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Homepage</title>
+</head>
+
+<body>
+  <div class="home-grid">
+    <div class="cell">
+      <i class="fa-solid fa-utensils icon"></i>
+      <h2>CookXperiences</h2>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <div class="cell cell--darkblue">Cell 2</div>
+    <div class="cell"><img src="../src/assets/images/food1.jpg" alt="food"></div>
+    <div class="cell"><h2>Participantes</h2></div>
+    <div class="cell"><h2>Jornadas</h2></div>
+    <div class="cell"><h2>Contactanos</h2></div>
+    <div class="cell cell--darkblue"></div>
+    <div class="cell"><img src="../src/assets/images/food2.jpg" alt="food"></div>
+    <div class="cell"><h3>Learn to cook</h3></div>
+    <div class="cell"><img src="../src/assets/images/food3.jpg" alt="food"></div>
+    <div class="cell cell--white"></div>
+    <div class="cell"><img src="../src/assets/images/food4.jpg" alt="food"></div>
+    <div class="cell"><img src="../src/assets/images/food5.jpg" alt="food"></div>
+    <div class="cell"><h2>Diviértete!</h2></div>
+    <div class="cell"><img src="../src/assets/images/food6.jpg" alt="food"></div>
+    <div class="cell cell--white"></div>
+    <div class="cell cell--darkblue"></div>
+    <div class="cell"><h2>Disfruta de</h2></div>
+    <div class="cell"><h2>★★★★☆</h2></div>
+    <div class="cell"><img src="../src/assets/images/crop1.jpg" alt="food"></div>
+    <div class="cell"><img src="../src/assets/images/crop2.jpg" alt="food"></div>
+    <div class="cell cell--darkblue"></div>
+    <div class="cell"><img src="../src/assets/images/food7.jpg" alt="food"></div>
+    <div class="cell"><h2>tu comida!</h2></div>
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>
