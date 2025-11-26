@@ -24,25 +24,34 @@ body {
   line-height: 1.5em;
 }
 
-a:link,
-a:visited {
-  color: variables.$uoc-corporate;
-  text-decoration: none;
-}
+a {
+  & {
 
-a:hover {
-  color: variables.$uoc-masterbrand;
+    &:link,
+    &:visited {
+      color: variables.$uoc-corporate;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: variables.$uoc-masterbrand;
+    }
+  }
 }
 
 @layer components {
 
-  ul {
-    list-style: none;
+  .checked {
+    color: variables.$uoc-masterbrand;
+  }
+
+  nav ul {
+    padding: 0 !important;
+    list-style-type: none;
   }
 
   footer {
     @include m.center-object;
-    background-color: variables.$lightgrey;
     @include m.padding-top-bottom(2em, 2em);
   }
 
@@ -57,62 +66,154 @@ a:hover {
     background-color: variables.$lightgrey;
   }
 
+  .cell {
+    @include m.center-object;
+  }
+
+  .cell--logo {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .icon {
+    display: inline-block;
+    font-size: 3em;
+  }
+
+  .socials {
+    display: inline-block;
+    font-size: 1.5em;
+  }
+
+  .cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cell--darkblue {
+    background-color: variables.$uoc-corporate;
+  }
+
+  .cell--white {
+    background-color: variables.$white;
+  }
+
+  hr {
+    border: 2px solid variables.$uoc-corporate;
+    height: 5px;
+    background-color: variables.$uoc-corporate;
+  }
+
   @supports (display: grid) {
 
     @container (min-width: 360px) {
       footer {
         flex-direction: column;
+        background-color: variables.$white;
+      }
+
+      .cell--hide {
+        visibility: hidden;
+      }
+
+      hr {
+        width: 75%;
+      }
+
+      .navigation-footer {
+        @include m.center-object;
+        flex-direction: column;
+      }
+
+      .socials-footer {
+        @include m.center-object;
+        flex-direction: row;
+        margin-top: 2em;
       }
     }
+
+
 
     @container (min-width: 480px) {
+
+      hr {
+        width: 100%;
+      }
+
       footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2em;
+
+        @include m.padding-left-right(20%, 20%);
+        background-color: variables.$lightgrey;
+
+        div {
+          &.footer-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+          }
+        }
+      }
+
+      .home-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+      }
+
+      .cell--hide {
+        visibility: visible;
       }
     }
 
+
+
+
     @container (min-width: 768px) {
+
+      hr {
+        width: 200%;
+      }
+
       footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        @include m.padding-left-right(30%, 30%);
+
+        div {
+          &.footer-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+          }
+
+          &.footer-wireframe {
+            @include m.center-object;
+            @include m.padding-left-right(30%, 60%);
+            gap: 20%;
+          }
+
+          &.socials-footer {
+            display: inline-flex;
+            gap: 1em;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .navigation-footer {
+        display: inline-flex;
+        gap: 2em;
+        flex-direction: row;
+      }
+
+      .home-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
       }
     }
 
     .home-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(4, 1fr);
       grid-auto-flow: row;
       grid-auto-rows: 1fr;
-    }
-
-    .cell {
-      @include m.center-object;
-    }
-
-    .cell--logo {
-      flex-direction: column;
-    }
-
-    .icon {
-      display: inline-block;
-      font-size: 3em;
-    }
-
-    .cell img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cell--darkblue {
-      background-color: variables.$uoc-corporate;
-    }
-
-    .cell--white {
-      background-color: variables.$white;
     }
   }
 }

@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="stylesheet" href="../node_modules/star-rating.js/dist/star-rating.css">
   <title>Homepage</title>
 </head>
 
@@ -15,34 +16,57 @@
       <i class="fa-solid fa-utensils icon"></i>
       <h2>CookXperiences</h2>
     </div>
-    <div class="cell cell--darkblue">Cell 2</div>
+    <div class="cell cell--white"></div>
     <div class="cell"><img src="../src/assets/images/food1.jpg" alt="food"></div>
-    <div class="cell"><h2><a href="./participantes.html">Participantes</a></h2></div>
-    <div class="cell"><h2><a href="./jornadas.html">Jornadas</a></h2></div>
-    <div class="cell"><h2><a href="./contacto.html">Contáctanos</a></h2></div>
+    <div class="cell">
+      <h2><a href="./participantes.html">Participantes</a></h2>
+    </div>
+    <div class="cell">
+      <h2><a href="./jornadas.html">Jornadas</a></h2>
+    </div>
+    <div class="cell">
+      <h2><a href="./contacto.html">Contáctanos</a></h2>
+    </div>
     <div class="cell cell--darkblue"></div>
     <div class="cell"><img src="../src/assets/images/food2.jpg" alt="food"></div>
-    <div class="cell"><h3>Learn to cook</h3></div>
+    <div class="cell">
+      <h3>Aprende a cocinar!</h3>
+    </div>
     <div class="cell"><img src="../src/assets/images/food3.jpg" alt="food"></div>
     <div class="cell cell--white"></div>
     <div class="cell"><img src="../src/assets/images/food4.jpg" alt="food"></div>
     <div class="cell"><img src="../src/assets/images/food5.jpg" alt="food"></div>
-    <div class="cell"><h2>Diviértete!</h2></div>
+    <div class="cell">
+      <h2>Diviértete!</h2>
+    </div>
     <div class="cell"><img src="../src/assets/images/food6.jpg" alt="food"></div>
     <div class="cell cell--white"></div>
     <div class="cell cell--darkblue"></div>
-    <div class="cell"><h2>Disfruta de</h2></div>
+    <div class="cell">
+      <h2>Disfruta de</h2>
+    </div>
     <div class="cell cell--logo">
       <h2>Rate us!</h2>
-      <h2>★★★★☆</h2>
+      <select class="star-rating">
+        <option value="">Select a rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Very Good</option>
+        <option value="3">Average</option>
+        <option value="2">Poor</option>
+        <option value="1">Terrible</option>
+      </select>
     </div>
-    <div class="cell"><img src="../src/assets/images/crop1.jpg" alt="food"></div>
-    <div class="cell"><img src="../src/assets/images/crop2.jpg" alt="food"></div>
+    <div class="cell cell--white"><img src="../src/assets/images/crop1.jpg" alt="food" class="cell--hide"></div>
+    <div class="cell cell--hide"><img src="../src/assets/images/crop2.jpg" alt="food"></div>
     <div class="cell cell--darkblue"></div>
     <div class="cell"><img src="../src/assets/images/food7.jpg" alt="food"></div>
-    <div class="cell"><h2>tu comida!</h2></div>
+    <div class="cell">
+      <h2>tu comida!</h2>
+    </div>
   </div>
   <include src="./views/footer.html"></include>
+  <script src="./assets/scripts/stars.js"></script>
+  <script src="../node_modules/star-rating.js/dist/star-rating.min.js"></script>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 
