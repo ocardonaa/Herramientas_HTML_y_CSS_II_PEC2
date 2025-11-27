@@ -1,0 +1,29 @@
+@use "../variables";
+@use "../../mixins/mixins" as m;
+@use '../main';
+@use '../common';
+
+@layer reset, components;
+
+@layer reset {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        container-type: inline-size;
+    }
+}
+
+@layer components {
+
+    @container (min-width: 360px) {
+    }
+
+    @container (min-width: 480px) {
+    }
+
+    @container (min-width: 768px) {
+
+    }
+}

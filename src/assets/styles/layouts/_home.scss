@@ -1,5 +1,7 @@
 @use "../variables";
 @use "../../mixins/mixins" as m;
+@use '../main';
+@use '../common';
 
 @layer reset, components;
 
@@ -13,47 +15,8 @@
   }
 }
 
-body {
-  background-color: variables.$uoc-bg;
-  color: variables.$uoc-corporate;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: variables.$font-family-sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
-}
-
-a {
-  & {
-
-    &:link,
-    &:visited {
-      color: variables.$uoc-corporate;
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: variables.$uoc-masterbrand;
-    }
-  }
-}
 
 @layer components {
-
-  .checked {
-    color: variables.$uoc-masterbrand;
-  }
-
-  nav ul {
-    padding: 0 !important;
-    list-style-type: none;
-  }
-
-  footer {
-    @include m.center-object;
-    @include m.padding-top-bottom(2em, 2em);
-  }
 
   .logo {
     width: 100%;
@@ -61,28 +24,10 @@ a {
   }
 
   .home-grid {
+    //fallback si no hay grid
     display: flex;
     flex-wrap: wrap;
     background-color: variables.$lightgrey;
-  }
-
-  .cell {
-    @include m.center-object;
-  }
-
-  .cell--logo {
-    flex-direction: column;
-    padding: 1em;
-  }
-
-  .icon {
-    display: inline-block;
-    font-size: 3em;
-  }
-
-  .socials {
-    display: inline-block;
-    font-size: 1.5em;
   }
 
   .cell img {
@@ -99,61 +44,22 @@ a {
     background-color: variables.$white;
   }
 
-  hr {
-    border: 2px solid variables.$uoc-corporate;
-    height: 5px;
-    background-color: variables.$uoc-corporate;
-  }
-
   @supports (display: grid) {
 
+    .home-grid {
+      display: grid;
+      grid-auto-flow: row;
+      grid-auto-rows: 1fr;
+    }
+
     @container (min-width: 360px) {
-      footer {
-        flex-direction: column;
-        background-color: variables.$white;
-      }
 
       .cell--hide {
         visibility: hidden;
       }
-
-      hr {
-        width: 75%;
-      }
-
-      .navigation-footer {
-        @include m.center-object;
-        flex-direction: column;
-      }
-
-      .socials-footer {
-        @include m.center-object;
-        flex-direction: row;
-        margin-top: 2em;
-      }
     }
 
-
-
     @container (min-width: 480px) {
-
-      hr {
-        width: 100%;
-      }
-
-      footer {
-
-        @include m.padding-left-right(20%, 20%);
-        background-color: variables.$lightgrey;
-
-        div {
-          &.footer-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2em;
-          }
-        }
-      }
 
       .home-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -165,55 +71,12 @@ a {
       }
     }
 
-
-
-
     @container (min-width: 768px) {
-
-      hr {
-        width: 200%;
-      }
-
-      footer {
-        @include m.padding-left-right(30%, 30%);
-
-        div {
-          &.footer-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2em;
-          }
-
-          &.footer-wireframe {
-            @include m.center-object;
-            @include m.padding-left-right(30%, 60%);
-            gap: 20%;
-          }
-
-          &.socials-footer {
-            display: inline-flex;
-            gap: 1em;
-            margin-top: 0;
-          }
-        }
-      }
-
-      .navigation-footer {
-        display: inline-flex;
-        gap: 2em;
-        flex-direction: row;
-      }
 
       .home-grid {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
       }
-    }
-
-    .home-grid {
-      display: grid;
-      grid-auto-flow: row;
-      grid-auto-rows: 1fr;
     }
   }
 }
