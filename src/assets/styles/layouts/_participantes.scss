@@ -12,18 +12,68 @@
 
     html {
         container-type: inline-size;
+        background-color: variables.$uoc-bg;
     }
 }
 
 @layer components {
 
+    h1 {
+        text-align: center;
+    }
+
+    .participantes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        @include m.margin-left-right(15%, 15%);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+    }
+
+    figcaption {
+        @include m.center-object;
+        flex-direction: column;
+        @include m.margin-top-bottom(2em, 0);
+    }
+
     @container (min-width: 360px) {
+        h1 {
+            @include m.padding-top-bottom(1em, 1em);
+        }
     }
 
     @container (min-width: 480px) {
+
+        figure {
+            flex: 1 1 40%;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            @include m.padding-top-bottom(2em, 2em);
+        }
     }
 
     @container (min-width: 768px) {
 
+        figcaption {
+            @include m.padding-left-right(2em, 2em);
+        }
+
+        figure {
+            flex: 1 1 30%;
+        }
+
+        h1 {
+            @include m.padding-top-bottom(2em, 2em);
+        }
     }
 }

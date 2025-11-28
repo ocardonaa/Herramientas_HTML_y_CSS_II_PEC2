@@ -36,6 +36,7 @@ footer {
 
 header {
     @include m.padding-top-bottom(2em, 2em);
+    background-color: variables.$white;
 }
 
 .cell {
@@ -94,6 +95,11 @@ hr {
         width: 75%;
     }
 
+    .header-hr {
+        width: 80%;
+        margin-inline-start: 10%;
+    }
+
     .navigation-footer {
         @include m.center-object;
         flex-direction: column;
@@ -114,6 +120,11 @@ hr {
         width: 100%;
     }
 
+    .header-hr {
+        width: 80%;
+        margin-inline-start: 10%;
+    }
+
     footer {
 
         @include m.padding-left-right(20%, 20%);
@@ -124,7 +135,6 @@ hr {
             grid-template-columns: repeat(2, 1fr);
             gap: 2em;
         }
-
     }
 }
 
@@ -137,6 +147,7 @@ hr {
 
     .header-hr {
         width: 80%;
+        margin-inline-start: 10%;
     }
 
     header {
@@ -147,11 +158,13 @@ hr {
             width: 100%;
             @include m.padding-left-right(10%, 10%);
             align-items: center;
+            flex-direction: row;
         }
     }
 
     .navigation-header {
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
         gap: 1em;
     }
 
