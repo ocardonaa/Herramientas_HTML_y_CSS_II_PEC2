@@ -1,0 +1,120 @@
+@use "../variables";
+@use "../../mixins/mixins" as m;
+@use '../main';
+@use '../common';
+
+@layer reset, components;
+
+@layer reset {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        container-type: inline-size;
+        background-color: variables.$uoc-bg;
+    }
+}
+
+@layer components {
+
+    h1 {
+        text-align: center;
+    }
+
+    .cooking-background {
+        aspect-ratio: 16/9;
+        opacity: 0.5;
+        object-fit: cover;
+    }
+
+    .cooking-normal {
+        width: 70%;
+        @include m.margin-left-right(15%, 15%);
+        object-fit: cover;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        @include m.center-object;
+        flex-direction: column;
+        @include m.margin-top-bottom(1em, 0);
+        font-size: smaller;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    blockquote {
+        text-align: justify;
+        width: 80%;
+    }
+
+    blockquote> :where(p, li, ul) {
+        font-size: 1.2em;
+    }
+
+    .blockquotes:has(blockquote) {
+        gap: 3em;
+    }
+
+    @container (min-width: 360px) {
+
+        h1 {
+            @include m.padding-top-bottom(1em, 1em);
+        }
+
+        .blockquotes {
+            display: flex;
+            flex-direction: column;
+            @include m.margin-left-right(15%, 0);
+        }
+
+        .cooking-normal {
+            height: 200px;
+            border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+        }
+
+    }
+
+    @container (min-width: 480px) {
+
+        h1 {
+            @include m.padding-top-bottom(2em, 2em);
+        }
+
+        .blockquotes {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            @include m.margin-left-right(15%, 15%);
+        }
+
+        .cooking-background {
+            max-width: 768px;
+            height: 300px;
+        }
+
+        .cooking-normal {
+            height: 300px;
+        }
+
+    }
+
+    @container (min-width: 768px) {
+        .cooking-background {
+            max-width: 1920px;
+            height: 500px;
+        }
+
+        .cooking-normal {
+            height: 500px;
+            border-radius: 0 5% 0 5% / 0 10% 0 10%;
+        }
+    }
+}
