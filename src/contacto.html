@@ -5,12 +5,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/layouts/_contacto.scss">
+    <!-- do not remove this line! -->
     <title>Contacto</title>
 </head>
 
 <body>
-    <h1>Contáctanos</h1>
+    <include src="./views/header.html"></include>
+    <h1>¿Deseas apuntarte a algún evento?</h1>
+    <form name="contact" netlify>
+        <div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name: </label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+        </div>
+        <div class="form-elem">
+            <label class="event-label">Evento:
+                <select multiple class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona uno o varios eventos</option>
+                    <option value="1">Charla comida asiatica</option>
+                    <option value="2">Cata de comida mexicana</option>
+                    <option value="3">Charla sobre nutrición</option>
+                    <option value="4">Presentación evento Hoffman</option>
+                    <option value="5">Charla sobre distinción de buenos restaurantes</option>
+                </select>
+            </label>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
