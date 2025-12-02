@@ -1,8 +1,8 @@
 :root {
   --gl-star-color: #fdd835;
   --gl-star-color-inactive: #dcdce6;
-  --gl-star-empty: url("star-empty.acb56ed2.svg");
-  --gl-star-full: url("star-full.d9a364e2.svg");
+  --gl-star-empty: url("star-empty.b98a4f5d.svg");
+  --gl-star-full: url("star-full.cc9e3e3e.svg");
   --gl-star-size: 24px;
   --gl-tooltip-background: #111111e6;
   --gl-tooltip-border-radius: 4px;
