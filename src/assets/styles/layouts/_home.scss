@@ -2,6 +2,11 @@
 @use '../main';
 @use '../common';
 
+:root {
+  --gl-star-empty: url('/node_modules/star-rating.js/img/star-empty.svg');
+  --gl-star-full: url('/node_modules/star-rating.js/img/star-full.svg');
+}
+
 @layer reset, components;
 
 @layer reset {
