@@ -2,6 +2,11 @@
 @use '../main';
 @use '../common';
 
+:root {
+  --gl-star-empty: url('/src/assets/images/stars/star-empty.svg');  /* Points to your bundled asset */
+  --gl-star-full: url('/src/assets/images/stars/star-full.svg');
+}
+
 @layer reset, components;
 
 @layer reset {
