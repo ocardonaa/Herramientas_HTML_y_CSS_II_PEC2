@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAAS,gBAAgB,CAAC,oBAAoB;IAC5C,IAAI,WAAW;AACjB","sources":["src/assets/scripts/stars.js"],"sourcesContent":["document.addEventListener('DOMContentLoaded', function () {\r\n  new StarRating('.star-rating');\r\n});"],"names":[],"version":3,"file":"Herramientas_HTML_y_CSS_II_PEC2.557a4fdc.js.map","sourceRoot":"/__parcel_source_root/"}
