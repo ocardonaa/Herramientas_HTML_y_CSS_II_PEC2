@@ -13,8 +13,7 @@ body {
 }
 
 a {
-    width: 100%;
-    height: auto;
+    @include m.width-height(100%, auto);
 }
 
 a:link,
@@ -23,11 +22,7 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
-    color: variables.$uoc-masterbrand;
-}
-
-.nav-link:hover {
+a:hover, .nav-link:hover {
     color: variables.$uoc-masterbrand;
 }
 
