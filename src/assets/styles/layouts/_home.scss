@@ -1,6 +1,7 @@
 @use "../variables";
 @use '../main';
 @use '../common';
+@use '../../mixins/mixins' as m;
 
 @layer reset, components;
 
@@ -22,8 +23,7 @@
   }
 
   .logo {
-    width: 100%;
-    height: 100%;
+    @include m.width-height(100%, 100%);
   }
 
   .home-grid {
@@ -34,9 +34,12 @@
   }
 
   .cell img {
-    width: 100%;
-    height: 100%;
+    @include m.width-height(100%, 100%);
     object-fit: cover;
+  }
+
+  .cell--darken:hover {
+    background-color: m.dark-background(#a9a9a9, -5%);
   }
 
   .cell--darkblue {

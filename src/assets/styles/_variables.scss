@@ -14,5 +14,5 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 $mqMinWidth: 420px;
 
 $theme-colors: (
-  "primary": #000078
+  "primary": $uoc-corporate
 );

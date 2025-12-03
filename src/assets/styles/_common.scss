@@ -12,6 +12,11 @@ body {
     line-height: 1.5em;
 }
 
+a {
+    width: 100%;
+    height: auto;
+}
+
 a:link,
 a:visited {
     color: variables.$uoc-corporate;
@@ -72,6 +77,11 @@ hr {
     background-color: variables.$uoc-corporate;
 }
 
+.header-hr {
+    width: 80%;
+    margin-inline-start: 10%;
+}
+
 @container (min-width: 360px) {
     footer {
         flex-direction: column;
@@ -98,11 +108,6 @@ hr {
         width: 75%;
     }
 
-    .header-hr {
-        width: 80%;
-        margin-inline-start: 10%;
-    }
-
     .socials-footer {
         @include m.center-object;
         flex-direction: row;
@@ -123,11 +128,6 @@ hr {
         width: 100%;
     }
 
-    .header-hr {
-        width: 80%;
-        margin-inline-start: 10%;
-    }
-
     footer {
 
         @include m.padding-left-right(20%, 20%);
@@ -146,11 +146,6 @@ hr {
 
     hr {
         width: 200%;
-    }
-
-    .header-hr {
-        width: 80%;
-        margin-inline-start: 10%;
     }
 
     header {

@@ -30,8 +30,7 @@
     }
 
     img {
-        width: 100%;
-        height: auto;
+        @include m.width-height(100%, auto);
         border-radius: 10%;
     }
 

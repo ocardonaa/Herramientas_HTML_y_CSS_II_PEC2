@@ -53,8 +53,7 @@
         }
 
         form {
-            width: 100cqw;
-            height: 100cqh;
+            @include m.width-height(100cqw, 100cqh);
             margin: auto;
             @include m.margin-top-bottom(0px, 2em);
         }
@@ -80,8 +79,6 @@
             @include m.center-object;
             gap: 5em;
             @include m.margin-top-bottom(0px, 4em);
-            width: 100cqw;
-            height: 100cqh;
         }
 
         .mb-3 {
