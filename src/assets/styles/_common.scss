@@ -22,7 +22,8 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover, .nav-link:hover {
+a:hover, 
+a.nav-link:hover {
     color: variables.$uoc-masterbrand;
 }
 
